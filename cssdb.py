@@ -3,6 +3,8 @@ script to extract CSS values given a list of CSS properties
 and their location in the specification.
 
 FIXME: ouput data into a suitable JSON format
+FIXME: create a config file
+FIXME: check if the cache directory exists and create it if not
 """
 from bs4 import BeautifulSoup
 import urllib2
@@ -26,6 +28,7 @@ logger.addHandler(handler)
 
 # To adjust for your own needs
 CACHEDIR = "/Users/karl/code/cssdb/cache/"
+# This is using the list of Jens Meiert with a few fixes.
 # JENSLISTURL = "http://meiert.com/en/indices/css-properties/"
 JENSLISTURL = "file:///Users/karl/code/cssdb/jens-css-list.html"
 DICTTEST = {
